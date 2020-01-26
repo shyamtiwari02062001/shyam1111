@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Notice Board</title>
+</head>
+<body >
+        <div class="navbar-fixed"> 
+                <nav >
+                  <div class="nav-wrapper" style="background-color: skyblue;">
+                    <a class="brand-logo center">DIGITAL NOTICE BOARD</a>
+                  </div>
+                </nav>
+              </div>
+
+
+        <div class="table-responsive"  style="padding-left: 20px;padding-right: 20px;padding-top: 12px;">
+                <table class="centered"  style="color: black;font-size: 20px;">
+                 <thead>
+                  <tr>
+                    <th scope="col">Sl.No</th>
+                    <th scope="col">For  Whome</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Reason</th>
+                    <th scope="col">Pdf</th>
+      
+                  </tr>
+      
+                 </thead>
+                 <tbody>
+                  <tr>
+                 <% for(var j=0; j <notice.length; j++) { %>
+                  <td><%= j+1 %></td>
+                  <td><%= notice[j].form %></td>
+                  <td><%= notice[j].date %></td>
+                  <td><%= notice[j].reason %></td>
+                  <td> <a href="<%= notice[j].path %>">PDF OR IMAGE</a></td>
+                
+
+                
+                  
+               
+                </tr>
+                <% } %>
+              
+                </tbody>
+                  
+      
+                </table>
+              </div>
+
+</body>
+</html>

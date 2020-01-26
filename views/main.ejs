@@ -43,21 +43,23 @@
                                         <input type="text" class="form-control" id="form" name="form" aria-describedby="form" placeholder="Enter The course for which notice is isseud" required>
                                       </div>
 
+                                      
                                       <div class="form-group">
-                                        <label for="date">DATE</label>
-                                        <input type="date" class="form-control" id="date" name="date" aria-describedby="date" required>
-                                        <script>
-                                            function myFunction() {
-                                              var x = document.getElementById("date").value;
-                                              document.getElementById("demo").innerHTML = x;
-                                            }
-                                            </script>
+                                        <label for="form">REASON OF NOTICE</label>
+                                        <input type="text" class="form-control" id="reason" name="reason" aria-describedby="reason" placeholder="Enter The Reason of Notice" required>
                                       </div>
-                                      <div class="form-group">
-                                          <label for="form">Reason</label>
-                                          <input type="text" class="form-control" id="reason" name="reason" aria-describedby="reason" placeholder="Enter The reason of notice" required>
-                                        </div>
+                                      
+                                      
                                        
+                                        
+                                        <div class="form-group">
+                                          <input type="hidden" class="form-control" id="time" name="time" aria-describedby="time"  value="<%= TIME %>" required>                                        
+                                        </div>
+
+                                      <div class="form-group">
+                                        <input type="hidden" class="form-control" id="date" name="date" aria-describedby="date"  value="<%= DATE %>" required>                                        
+                                      </div>
+
                                         <div class="form-group">
                                             <input type="hidden" class="form-control" id="path" name="path" aria-describedby="path"  value="<%= pathObj %>" required>                                        
                                         </div>
@@ -70,7 +72,7 @@
                 </div>
               </div>
 
-              
+                 
 
 
                                          
